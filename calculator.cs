@@ -15,38 +15,46 @@ namespace Learning
 
             while (useAgain)
             {
-                response = "";
-
-                Console.WriteLine("Enter Number 1: ");
-                num1 = Convert.ToDouble(Console.ReadLine());
-
-                Console.WriteLine("Enter Number 2: ");
-                num2 = Convert.ToDouble(Console.ReadLine());
-
-                Console.WriteLine("Enter an option: ");
-                Console.WriteLine("+ : Add");
-                Console.WriteLine("- : Minus");
-                Console.WriteLine("* : Mulitply");
-                Console.WriteLine("/ : Divide");
-
-                switch (Console.ReadLine())
+                try
                 {
-                    case "+":
-                        result = num1 + num2;
-                        Console.WriteLine(num1 + "+" + num2 + " is: " + result);
-                        break;
-                    case "-":
-                        result = num1 - num2;
-                        Console.WriteLine(num1 + "-" + num2 + " is: " + result);
-                        break;
-                    case "*":
-                        result = num1 * num2;
-                        Console.WriteLine(num1 + "*" + num2 + " is: " + result);
-                        break;
-                    case "/":
-                        result = num1 / num2;
-                        Console.WriteLine(num1 + "/" + num2 + " is: " + result);
-                        break;
+                    response = "";
+
+                    Console.WriteLine("Enter Number 1: ");
+                    num1 = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Enter Number 2: ");
+                    num2 = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Enter an option: ");
+                    Console.WriteLine("+ : Add");
+                    Console.WriteLine("- : Minus");
+                    Console.WriteLine("* : Mulitply");
+                    Console.WriteLine("/ : Divide");
+
+                    switch (Console.ReadLine())
+                    {
+                        case "+":
+                            result = num1 + num2;
+                            Console.WriteLine(num1 + "+" + num2 + " is: " + result);
+                            break;
+                        case "-":
+                            result = num1 - num2;
+                            Console.WriteLine(num1 + "-" + num2 + " is: " + result);
+                            break;
+                        case "*":
+                            result = num1 * num2;
+                            Console.WriteLine(num1 + "*" + num2 + " is: " + result);
+                            break;
+                        case "/":
+                            result = num1 / num2;
+                            Console.WriteLine(num1 + "/" + num2 + " is: " + result);
+                            break;
+                    }
+                }
+                
+                catch (FormatException)
+                {
+                    Console.WriteLine("Number only!");
                 }
 
                 Console.WriteLine("Would you like to use again? [Y/N]");
