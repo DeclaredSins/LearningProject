@@ -18,6 +18,8 @@ namespace Learning
                 try
                 {
                     response = "";
+                    num1 = 0;
+                    num2 = 0;
 
                     Console.WriteLine("Enter Number 1: ");
                     num1 = Convert.ToDouble(Console.ReadLine());
